@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/filters/confused.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+      <div ng-controller="MainController">
+        <p>{{title}}</p>
+        <input ng-model="myInput" />
+        <p>{{myInput | confused}}</p>
+        <input type="checkbox" ng-model="checkVal">
+        <button ng-click="getCheckVal()">Check the check</button>
+      </div>
+  </body>
+</html>
